@@ -69,7 +69,7 @@ public class Program
         bool answer = false;
 
         // code here
-        if (y>=0 & (y + Math.Abs(x) <= 1))
+        if (y>=0 && (y + Math.Abs(x) <= 1))
             answer = true;
             
         // end
@@ -176,7 +176,7 @@ public class Program
         // code here
         if (x<=-1)
             answer = 0;
-        else if (x>=-1 & x<=0)
+        else if (x>=-1 && x<=0)
             answer = 1+x;
         else
             answer = 1;
@@ -191,7 +191,7 @@ public class Program
         // code here
         if (x <= -1)
             answer = 1;
-        else if (x>-1 & x<=1)
+        else if (x>-1 && x<=1)
             answer = -x;
         else
             answer = -1;
@@ -272,7 +272,7 @@ public class Program
             x = double.Parse(Console.ReadLine());
             Console.WriteLine("Введите y:");
             y = double.Parse(Console.ReadLine());
-            if ((x <= r2 & y<=r2) | (x >= r1 & y >=r2))
+            if ((x <= r2 & y<=r2) || (x >= r1 & y >=r2))
                 answer += 1;
             
         }
@@ -313,7 +313,7 @@ public class Program
             x = double.Parse(Console.ReadLine());
             Console.WriteLine("Введите y:");
             y = double.Parse(Console.ReadLine());
-            if ((x >= 0 & x <= Math.PI) & (y >= 0 & y <= Math.Sin(x)))
+            if ((x >= 0 & x <= Math.PI) && (y >= 0 & y <= Math.Sin(x)))
                 answer++;
         }
         // end
@@ -339,16 +339,16 @@ public class Program
             Console.WriteLine("Введите Y");
             y = double.Parse(Console.ReadLine());
             S = Math.Sqrt(x * x + y * y);
-            if (x >= 0 | y >= 0)
+            if (x >= 0 || y >= 0)
             {
                 Console.WriteLine("1 квадрант");
                 answer1++;
             }
-            else if (x < 0 & y > 0)
+            else if (x < 0 && y > 0)
             {
                 Console.WriteLine("2 квадрант");
             }
-            else if (x <= 0 | y <= 0)
+            else if (x <= 0 || y <= 0)
             {
 
                 answer3++;
@@ -418,7 +418,7 @@ public class Program
             for (int j = 0; j < 4; j++)
             {
                 double marks = double.Parse(Console.ReadLine());
-                if (marks == 2 | marks == 3)
+                if (marks == 2 || marks == 3)
                     value = false;
                 
             }
@@ -487,9 +487,9 @@ public class Program
     public double Task_2_13(double A, double B, int type)
     {
         double answer = 0;
-        if (A <= 0 | B <= 0) return answer;
+        if (A <= 0 || B <= 0) return answer;
         // code here;
-        if (A > 0 | B > 0)
+        if (A > 0 || B > 0)
         {
             switch (type)
             {
@@ -588,7 +588,7 @@ public class Program
                 x = double.Parse(Console.ReadLine());
                 Console.WriteLine("Введите y:");
                 y = double.Parse(Console.ReadLine());
-                if ((x <= r2 & y <= r2) | (x >= r1 & y >= r2))
+                if ((x <= r2 && y <= r2) || (x >= r1 && y >= r2))
                     answer += 1;
             }
             catch 
@@ -651,16 +651,16 @@ public class Program
                 Console.WriteLine("Введите Y");
                 y = double.Parse(Console.ReadLine());
                 S = Math.Sqrt(x * x + y * y);
-                if (x >= 0 & y >= 0)
+                if (x >= 0 && y >= 0)
                 {
                     Console.WriteLine("1 квадрант");
                     answer1++;
                 }
-                else if (x < 0 & y > 0)
+                else if (x < 0 && y > 0)
                 {
                     Console.WriteLine("2 квадрант");
                 }
-                else if (x <= 0 & y <= 0)
+                else if (x <= 0 && y <= 0)
                 {
                     Console.WriteLine("3 квадрант");
                     answer3++;
